@@ -6,7 +6,6 @@ var alchemy = new AlchemyAPI(config.alchemyAPIKey);
 
 // alchemy
 function alchemyEntities(sentence, cb){
-    var entities;
     alchemy.entities(sentence, {}, function(err, apires){
         if (err) cb(err, null);
 
@@ -15,7 +14,6 @@ function alchemyEntities(sentence, cb){
 }
 
 function alchemyKeywords(sentence, cb){
-    var keywords;
     alchemy.keywords(sentence, {}, function(err, apires){
         if (err) return cb(err, null);
 
