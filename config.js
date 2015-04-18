@@ -1,0 +1,1 @@
+exports.alchemyAPIKey = "c93c0b593bba60b321f934b0a68289cfc9a9d096"
