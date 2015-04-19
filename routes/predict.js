@@ -3,6 +3,7 @@ var router = express.Router();
 var AlchemyAPI = require("alchemy-api");
 var config = require("../config");
 var alchemy = new AlchemyAPI(config.alchemyAPIKey);
+var wolfram = require('wolfram').createClient("L5P73K-T6KKXEQ5YJ");
 
 // alchemy
 function alchemyEntities(sentence, cb){
@@ -23,12 +24,10 @@ function alchemyKeywords(sentence, cb){
 
 // other 
 function wolframAlpha(){
-	var wolfram = require('wolfram-alpha').createClient("L5P73K-T6KKXEQ5YJ", opts);
-	 
-	wolfram.query("integrate 2x", function (err, result) {
-		  if (err) throw err;
-		    console.log("Result: %j", result);
-	});
+	wolfram.query("integrate 2x", function(err, result) {  
+	if(err) throw err
+	    console.log("Result: %j", result)
+	})
 }
 
 // everything else
