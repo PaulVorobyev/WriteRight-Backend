@@ -1,6 +1,22 @@
+$color-blue: #3498db;
+$color-white: #F7F7F7;
+
 html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+}
+
+.introduction {
+	width: 100%;
+	height: 80%;
+	margin: 0;
+	padding: 0;
+	background-color: $color-blue;
+	color: $color-white;
+
+	.container {
+		margin-top: 20%;
+	}
 }
