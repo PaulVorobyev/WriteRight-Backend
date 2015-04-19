@@ -1,7 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0; }
+
+.introduction {
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  background-color: #3498db;
+  color: #F7F7F7; }
+  .introduction .container {
+    padding: auto; }
+  .introduction .title {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    margin-left: 75px;
+    margin-top: 25%; }
+  .introduction .header {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    margin-left: 75px; }
+  .introduction .iphone5s {
+    box-sizing: content-box;
+    transform: scale(0.75); }
+
+.features {
+  background-color: #ecf0f1;
+  color: #1d1d1d;
+  text-align: center;
+  padding: 0;
+  margin-top: -75px;
+  margin-bottom: 75px; }
+  .features .feature-text {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 24px; }
 
 /*# sourceMappingURL=styles.css.map */
