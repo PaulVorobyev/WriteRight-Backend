@@ -4,7 +4,6 @@ var AlchemyAPI = require("alchemy-api");
 var config = require("../config");
 var alchemy = new AlchemyAPI(config.alchemyAPIKey);
 
-<<<<<<< HEAD
 // alchemy
 function alchemyEntities(sentence, cb){
     alchemy.entities(sentence, {}, function(err, apires){
@@ -24,7 +23,12 @@ function alchemyKeywords(sentence, cb){
 
 // other 
 function wolframAlpha(){
-
+	var wolfram = require('wolfram-alpha').createClient("L5P73K-T6KKXEQ5YJ", opts);
+	 
+	wolfram.query("integrate 2x", function (err, result) {
+		  if (err) throw err;
+		    console.log("Result: %j", result);
+	});
 }
 
 // everything else
@@ -32,34 +36,10 @@ function returnOptions(sentence, cb){
     
 }
 
-
-
-
-
 router.post('/parseSentence', function(req, res) {
     returnOptions(req.body.userInput, function(err, array){
         res.json(array);
     });
-
+	console.log("output");
 });
 module.exports = router;
-
-
-
-
-
-
-
-=======
-/* GET home page. */
-router.post('/parseSentence', function(req, res) {
-    alchemy.entities(req.body.userInput, {}, function(err, apires){
-        if (err) throw err;
-
-        var entities = apires.entities;
-        console.log(apires);
-        res.json(entities);
-    });
-});
-module.exports = router;
->>>>>>> c7883ce6805285eb21a8a03e006186ea59041d93
