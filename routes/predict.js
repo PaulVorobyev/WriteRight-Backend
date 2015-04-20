@@ -4,8 +4,12 @@ var request = require('request');
 var AlchemyAPI = require("alchemy-api");
 var config = require("../config");
 var alchemy = new AlchemyAPI(config.alchemyAPIKey);
+<<<<<<< HEAD
 var xml2js = require('xml2js');
 var googlemaps = require('googlemaps');
+=======
+var wolfram = require('wolfram').createClient("L5P73K-T6KKXEQ5YJ");
+>>>>>>> d827914fe977e2213f56d10bc274260edf50b3d4
 
 // alchemy
 function alchemyEntities(sentence, cb){
@@ -40,7 +44,6 @@ function wolframAlpha(input, cb){
             });
         }
      });
-
 }
 
 function googleIt(input, cb){
